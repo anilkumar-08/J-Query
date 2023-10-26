@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>JQuery</title>
+</head>
+<body>
+
+<!-- ex1 -->
+<a href="http://jquery.com/">jQuery</a>
+
+
+<!-- ex2 -->
+  <h2 id="head1">This is a heading</h2>
+  <p id="para1">This is a paragraph.</p>
+  <p id="para2">This is another paragraph.</p>
+
+<!-- ex3 -->
+  <button id="bt1">Click me to hide paragraphs</button>
+<br>
+
+<!-- ex4 -->
+<h2 id="head2">This is a heading</h2>
+<p id="para3">This is a paragraph.</p>
+<p id="test1">This is another paragraph.</p>
+<button id="btn2">Click me</button>
+
+
+<!-- ex5 -->
+<h2 id="head3" class="test2">This is a heading</h2>
+
+<p class="test3">This is a paragraph.</p>
+<p class="test4">This is another paragraph.</p>
+
+<button id="btn3">Click me</button>
+
+<!-- ex6 -->
+<p id="para4">If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+
+
+
+
+<!-- ex7 -->
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+
+
+
+
+
+<script>
+$( document ).ready(function() 
+{
+    $( "a" ).click(function( event ) 
+    {
+      alert( "The link will take you to jquery.com" );
+    });
+});
+</script>
+
+<!-- ex2 script -->
+<script>
+$(document).ready(function()
+{
+  $("#bt1").click(function()
+  {
+    $("#para1").hide();
+  });
+});
+</script>
+
+
+<!--Id selector-->
+<script>
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    $("#test1").hide();
+  });
+});
+</script>
+
+
+
+
+<script>
+  $(document).ready(function(){
+    $("#para3").click(function(){
+      $(this).hide();
+    });
+  });
+  </script>
+
+
+
+
+<!--class selector-->
+<script>
+    $(document).ready(function(){
+      $("#btn3").click(function(){
+        $(".test2").hide();
+      });
+    });
+    </script>
+
+
+
+
+
+<!--Hide and Show-->
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#para4").hide();
+  });
+  $("#show").click(function(){
+    $("#para4").show();
+  });
+});
+</script>
+
+
+
+
+
+
+<!--flip Panel-->
+<script>
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  });
+});
+</script>
+
+
+<script src="myscript.js"></script>
+</body>
+</html>
